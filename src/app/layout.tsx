@@ -32,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/fav.png" type="image/png" />
+      </head>
       <body className={`${playfair.variable} ${sourceSans.variable} font-sans ${inter.className}`}>
         {children}
       </body>
