@@ -43,9 +43,15 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <header className="bg-[#1a1a1a] text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-playfair text-5xl md:text-6xl mb-6">
-            Anima
-          </h1>
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/anima.png"
+              alt="Anima"
+              width={200}
+              height={100}
+              priority
+            />
+          </div>
           <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto">
             The app for classical musicians
           </p>
@@ -141,7 +147,7 @@ export default function Home() {
 
       <footer className="bg-[#1a1a1a] text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Your App Name. All rights reserved.</p>
+          <p>&copy; 2024 Anima. All rights reserved.</p>
         </div>
       </footer>
     </main>
