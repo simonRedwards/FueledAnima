@@ -19,10 +19,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Anima',
   description: 'The app for classical musicians',
-  icons: [
-    { rel: 'icon', url: '/fav.png' },
-    { rel: 'icon', url: '/favicon.ico' },
-  ],
 }
 
 export default function RootLayout({
@@ -32,9 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/fav.png" type="image/png" />
-      </head>
       <body className={`${playfair.variable} ${sourceSans.variable} font-sans ${inter.className}`}>
         {children}
       </body>
