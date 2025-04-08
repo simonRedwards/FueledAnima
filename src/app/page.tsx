@@ -11,6 +11,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
+    setMessage('');
 
     try {
       const response = await fetch('/api/subscribe', {
@@ -29,11 +30,12 @@ export default function Home() {
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.error || 'Something went wrong');
+        setMessage(data.error || 'Something went wrong. Please try again later.');
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setStatus('error');
-      setMessage('Failed to submit email');
+      setMessage('Failed to connect to the server. Please try again later.');
     }
   };
 
@@ -42,10 +44,10 @@ export default function Home() {
       <header className="bg-[#1a1a1a] text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-playfair text-5xl md:text-6xl mb-6">
-            Your App Name
+            Anima
           </h1>
           <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto">
-            A brief, compelling description of your app that captures its essence and value proposition.
+            The app for classical musicians
           </p>
         </div>
       </header>
