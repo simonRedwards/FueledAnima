@@ -19,9 +19,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Anima',
   description: 'The app for classical musicians',
-  icons: {
-    icon: '/fav.png',
-  },
+  icons: [
+    { rel: 'icon', url: '/fav.png' },
+    { rel: 'icon', url: '/favicon.ico' },
+  ],
 }
 
 export default function RootLayout({
