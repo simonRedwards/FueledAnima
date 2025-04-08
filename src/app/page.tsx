@@ -62,51 +62,36 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-8">
             {/* Screenshot 1 */}
-            <div className="bg-gray-100 p-8 rounded-2xl shadow-lg">
-              <div className="relative w-[300px] mx-auto">
-                <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-16 h-2.5 bg-black rounded-full"></div>
-                <div className="rounded-[30px] overflow-hidden">
-                  <Image
-                    src="/Event PDP.png"
-                    alt="App Screenshot 1"
-                    width={300}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
+            <div className="rounded-[30px] overflow-hidden shadow-lg">
+              <Image
+                src="/Event PDP.png"
+                alt="App Screenshot 1"
+                width={300}
+                height={600}
+                className="w-full h-auto"
+              />
             </div>
 
             {/* Screenshot 2 */}
-            <div className="bg-gray-100 p-8 rounded-2xl shadow-lg">
-              <div className="relative w-[300px] mx-auto">
-                <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-16 h-2.5 bg-black rounded-full"></div>
-                <div className="rounded-[30px] overflow-hidden">
-                  <Image
-                    src="/Yamen.png"
-                    alt="App Screenshot 2"
-                    width={300}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
+            <div className="rounded-[30px] overflow-hidden shadow-lg">
+              <Image
+                src="/Yamen.png"
+                alt="App Screenshot 2"
+                width={300}
+                height={600}
+                className="w-full h-auto"
+              />
             </div>
 
             {/* Screenshot 3 */}
-            <div className="bg-gray-100 p-8 rounded-2xl shadow-lg">
-              <div className="relative w-[300px] mx-auto">
-                <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-16 h-2.5 bg-black rounded-full"></div>
-                <div className="rounded-[30px] overflow-hidden">
-                  <Image
-                    src="/Kelton.png"
-                    alt="App Screenshot 3"
-                    width={300}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
+            <div className="rounded-[30px] overflow-hidden shadow-lg">
+              <Image
+                src="/Kelton.png"
+                alt="App Screenshot 3"
+                width={300}
+                height={600}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
