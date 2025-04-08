@@ -7,7 +7,15 @@ const auth = new google.auth.GoogleAuth({
     private_key: process.env.GOOGLE_PRIVATE_KEY
       ?.replace(/\\n/g, '\n')  // Replace escaped newlines with actual newlines
       .replace(/"/g, '')       // Remove any double quotes
-      .trim(),                 // Remove any leading/trailing whitespace
+      .trim()                  // Remove any leading/trailing whitespace
+      .replace(/^-----BEGIN PRIVATE KEY-----/, '')  // Remove header if present
+      .replace(/-----END PRIVATE KEY-----$/, '')    // Remove footer if present
+      .trim()                  // Remove any new whitespace
+      .replace(/\n/g, '')      // Remove any remaining newlines
+      .replace(/\r/g, '')      // Remove any carriage returns
+      .replace(/\s+/g, '')     // Remove any other whitespace
+      .replace(/(.{64})/g, '$1\n')  // Add newlines every 64 characters
+      .trim(),                 // Final trim
   },
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
