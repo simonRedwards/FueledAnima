@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-8">
             {/* Screenshot 1 */}
