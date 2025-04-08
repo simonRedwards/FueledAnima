@@ -5,8 +5,8 @@ export async function POST(request: Request) {
   try {
     const { email } = await request.json();
 
-    // Basic email validation
-    if (!email || !email.includes('@')) {
+    // Validate email
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email address' },
         { status: 400 }
@@ -14,10 +14,11 @@ export async function POST(request: Request) {
     }
 
     const result = await appendEmailToSheet(email);
-
+    
     if (!result.success) {
+      console.error('Failed to save email:', result.error);
       return NextResponse.json(
-        { error: 'Failed to save email' },
+        { error: 'Failed to save email', details: result.error },
         { status: 500 }
       );
     }
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error in subscribe route:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error },
       { status: 500 }
     );
   }
