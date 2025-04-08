@@ -64,7 +64,7 @@ export default function Home() {
             {/* Screenshot 1 */}
             <div className="rounded-[30px] overflow-hidden shadow-lg">
               <Image
-                src="/Event PDP.png"
+                src="/Yamen.png"
                 alt="App Screenshot 1"
                 width={300}
                 height={600}
@@ -75,7 +75,7 @@ export default function Home() {
             {/* Screenshot 2 */}
             <div className="rounded-[30px] overflow-hidden shadow-lg">
               <Image
-                src="/Yamen.png"
+                src="/Event PDP.png"
                 alt="App Screenshot 2"
                 width={300}
                 height={600}
@@ -132,7 +132,7 @@ export default function Home() {
 
       <footer className="bg-[#1a1a1a] text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Anima. All rights reserved.</p>
+          <p>&copy; 2025 Anima. All rights reserved.</p>
         </div>
       </footer>
     </main>
