@@ -4,7 +4,7 @@ import { google } from 'googleapis';
 const auth = new google.auth.GoogleAuth({
   credentials: {
     client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY
+    private_key: `-----BEGIN PRIVATE KEY-----\n${process.env.GOOGLE_PRIVATE_KEY
       ?.replace(/\\n/g, '\n')  // Replace escaped newlines with actual newlines
       .replace(/"/g, '')       // Remove any double quotes
       .trim()                  // Remove any leading/trailing whitespace
@@ -15,7 +15,7 @@ const auth = new google.auth.GoogleAuth({
       .replace(/\r/g, '')      // Remove any carriage returns
       .replace(/\s+/g, '')     // Remove any other whitespace
       .replace(/(.{64})/g, '$1\n')  // Add newlines every 64 characters
-      .trim(),                 // Final trim
+      .trim()}\n-----END PRIVATE KEY-----`,  // Add the footer
   },
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
