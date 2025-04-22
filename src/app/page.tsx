@@ -85,7 +85,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="relative pt-20 md:pt-0 md:-mt-[30px]">
+          <div className="relative md:pt-0 md:-mt-[30px]">
             <div className="relative z-20 md:absolute md:left-[-15%] lg:left-[-10%] xl:left-[-5%] md:-top-8">
               <Image
                 src="/Real-Silver-Left.png"
