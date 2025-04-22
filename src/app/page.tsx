@@ -40,85 +40,42 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-white">
-      <header className="bg-[#1a1a1a] text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Image
-              src="/anima.png"
-              alt="Anima"
-              width={200}
-              height={100}
-              priority
-            />
-          </div>
-          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto">
-            The app for classical musicians
-          </p>
-        </div>
-      </header>
+    <main className="min-h-screen bg-[#0A0A0A] text-white">
+      <div className="container mx-auto px-4 py-16">
+        <nav className="mb-24">
+          <Image
+            src="/anima.png"
+            alt="Anima"
+            width={120}
+            height={40}
+            priority
+            className="h-8 w-auto"
+          />
+        </nav>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Screenshot 1 */}
-            <div className="rounded-[30px] overflow-hidden shadow-lg">
-              <Image
-                src="/Yamen.png"
-                alt="App Screenshot 1"
-                width={300}
-                height={600}
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Screenshot 2 */}
-            <div className="rounded-[30px] overflow-hidden shadow-lg">
-              <Image
-                src="/Event PDP.png"
-                alt="App Screenshot 2"
-                width={300}
-                height={600}
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Screenshot 3 */}
-            <div className="rounded-[30px] overflow-hidden shadow-lg">
-              <Image
-                src="/Kelton.png"
-                alt="App Screenshot 3"
-                width={300}
-                height={600}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair mb-8">Stay Updated</h2>
-            <p className="text-lg mb-8">
-              Sign up to be notified when we launch and get early access to exclusive features.
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-tight">
+              Your Stage, Your Sound – Connect, Share & Sell with Ease
+            </h1>
+            <p className="text-xl text-gray-400">
+              Make your mark and show the world your music and talent
             </p>
-            <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="email@website.com"
                 required
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#E6B17E] placeholder-gray-500"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+                className="bg-[#E6B17E] text-black px-8 py-3 rounded-lg hover:bg-[#D4935E] transition-colors disabled:opacity-50 font-medium"
               >
-                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                {status === 'loading' ? 'Signing up...' : 'Sign up'}
               </button>
             </form>
             {message && (
@@ -127,14 +84,29 @@ export default function Home() {
               </p>
             )}
           </div>
-        </div>
-      </section>
 
-      <footer className="bg-[#1a1a1a] text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Anima. All rights reserved.</p>
+          <div className="relative">
+            <div className="relative transform rotate-[-5deg] z-10">
+              <Image
+                src="/Event PDP.png"
+                alt="App Screenshot 1"
+                width={375}
+                height={812}
+                className="rounded-[40px] shadow-2xl"
+              />
+            </div>
+            <div className="absolute top-20 right-0 transform rotate-[5deg]">
+              <Image
+                src="/Yamen.png"
+                alt="App Screenshot 2"
+                width={375}
+                height={812}
+                className="rounded-[40px] shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
     </main>
   );
 }
