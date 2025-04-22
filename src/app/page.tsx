@@ -86,7 +86,7 @@ export default function Home() {
           </div>
 
           <div className="relative pt-20 md:pt-0 md:-mt-24">
-            <div className="relative z-10 md:absolute md:left-0 md:-top-8">
+            <div className="relative z-10 md:absolute md:left-[-10%] lg:left-[-5%] xl:left-0 md:-top-8">
               <Image
                 src="/Real-Silver-Left.png"
                 alt="App Screenshot 1"
@@ -95,7 +95,7 @@ export default function Home() {
                 className="rounded-[40px] shadow-2xl"
               />
             </div>
-            <div className="relative mt-[-100px] ml-auto max-w-[575px] md:absolute md:top-12 md:right-0">
+            <div className="relative mt-[-100px] ml-auto max-w-[575px] md:absolute md:top-12 md:right-[-10%] lg:right-[-5%] xl:right-0">
               <Image
                 src="/Real-Silver-Right.png"
                 alt="App Screenshot 2"
