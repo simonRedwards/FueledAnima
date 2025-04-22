@@ -85,8 +85,8 @@ export default function Home() {
             )}
           </div>
 
-          <div className="relative">
-            <div className="relative transform rotate-[-5deg] z-10">
+          <div className="relative pt-20 md:pt-0">
+            <div className="relative transform rotate-[-5deg] z-10 md:absolute md:left-0">
               <Image
                 src="/Event PDP.png"
                 alt="App Screenshot 1"
@@ -95,7 +95,7 @@ export default function Home() {
                 className="rounded-[40px] shadow-2xl"
               />
             </div>
-            <div className="absolute top-20 right-0 transform rotate-[5deg]">
+            <div className="relative mt-[-100px] ml-auto transform rotate-[5deg] max-w-[375px] md:absolute md:top-20 md:right-0">
               <Image
                 src="/Yamen.png"
                 alt="App Screenshot 2"
