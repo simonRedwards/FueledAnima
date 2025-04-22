@@ -85,22 +85,22 @@ export default function Home() {
             )}
           </div>
 
-          <div className="relative pt-20 md:pt-0">
-            <div className="relative z-10 md:absolute md:left-0">
+          <div className="relative pt-20 md:pt-0 md:-mt-16">
+            <div className="relative z-10 md:absolute md:left-0 md:-top-4">
               <Image
                 src="/Real-Silver-Left.png"
                 alt="App Screenshot 1"
-                width={375}
-                height={812}
+                width={475}
+                height={1029}
                 className="rounded-[40px] shadow-2xl"
               />
             </div>
-            <div className="relative mt-[-100px] ml-auto max-w-[375px] md:absolute md:top-20 md:right-0">
+            <div className="relative mt-[-100px] ml-auto max-w-[475px] md:absolute md:top-16 md:right-0">
               <Image
                 src="/Real-Silver-Right.png"
                 alt="App Screenshot 2"
-                width={375}
-                height={812}
+                width={475}
+                height={1029}
                 className="rounded-[40px] shadow-2xl"
               />
             </div>
