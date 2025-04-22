@@ -53,7 +53,7 @@ export default function Home() {
           />
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-tight">
               Your Stage, Your Sound – Connect, Share & Sell with Ease
